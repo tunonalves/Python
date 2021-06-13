@@ -15,3 +15,8 @@ print(imprime_mensaje2())
 valor_mensaje = imprime_mensaje2()
 
 print(valor_mensaje)
+
+def imprime_mensaje_personalizado(mensaje,valor1,valor2):
+	return mensaje + str((valor1 + valor2))
+
+print(imprime_mensaje_personalizado("La suma es: ",5,7))
