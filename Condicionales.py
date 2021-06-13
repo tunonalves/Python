@@ -13,3 +13,14 @@ def evaluacion(nota):
 nota_alumno=input("Introduce la nota: ")
 
 print(evaluacion(int(nota_alumno)))
+
+
+print("Obtencion carnet de conducir")
+
+edad = int(input("Introduce tu edad, por favor: "))
+
+def validacion(edad):
+	if 18 <= edad <= 90:
+		print("Puedes intentar obtener el carnet")
+	else:
+		print("Lo siento. No cumples con la edad necesaria")
