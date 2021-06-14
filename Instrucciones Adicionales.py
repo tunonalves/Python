@@ -9,3 +9,7 @@ for i in nombre:
 		continue # Continua sin contar los espacios en blanco
 	contador+=1
 print(contador)
+
+
+for i in nombre:
+	pass
