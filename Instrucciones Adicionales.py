@@ -13,3 +13,15 @@ print(contador)
 
 for i in nombre:
 	pass
+
+
+email = input("Email: ")
+
+for i in email:
+	if i == "@":
+		arroba = True
+		break
+else:
+	arroba = False
+
+print(arroba)
