@@ -12,7 +12,7 @@ print(contador)
 
 
 for i in nombre:
-	pass
+	pass  # pasa el bucle sin hacer nada
 
 
 email = input("Email: ")
