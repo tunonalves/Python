@@ -20,7 +20,16 @@ print("Obtencion carnet de conducir")
 edad = int(input("Introduce tu edad, por favor: "))
 
 def validacion(edad):
-	if 18 <= edad <= 90:
+	if (18 <= edad <= 90):
 		print("Puedes intentar obtener el carnet")
 	else:
 		print("Lo siento. No cumples con la edad necesaria")
+
+validacion(edad)
+
+lenguajes=["Java","Python","PHP","C#","Visual Basic"]
+
+if "SQL" not in lenguajes:
+	print("Falta el lenguaje")
+else:
+	print("Esta en la lista")
