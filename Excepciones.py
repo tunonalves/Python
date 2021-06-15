@@ -13,13 +13,14 @@ def divide(num1,num2):
 	except ZeroDivisionError:
 		print("Error divicion por 0")
 		return "Operacion erronea"
-	
-try:
+while True:		
+	try:
 
-	op1=(int(input("Introduce el primer número: ")))
-	op2=(int(input("Introduce el segundo número: ")))	
-except ValueError:
-	print("ERROR VALOR INCORRECTO")
+		op1=(int(input("Introduce el primer número: ")))
+		op2=(int(input("Introduce el segundo número: ")))
+		break	
+	except ValueError:
+		print("ERROR VALOR INCORRECTO")
 
 operacion=input("Introduce la operación a realizar (suma,resta,multiplica,divide): ")
 
