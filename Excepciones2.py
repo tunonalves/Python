@@ -13,6 +13,9 @@ def divide():
 		except ValueError:
 			print("Valores Erroneos")
 			intentos += 1
+		except:
+			print("ERROR")
+			intentos += 1
 		if (intentos == 3):
 			sys.exit()
 		
