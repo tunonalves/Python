@@ -21,7 +21,6 @@ try:
 except ValueError:
 	print("ERROR VALOR INCORRECTO")
 
-	
 operacion=input("Introduce la operación a realizar (suma,resta,multiplica,divide): ")
 
 if operacion=="suma":
