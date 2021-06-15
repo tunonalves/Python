@@ -12,6 +12,7 @@ def divide(num1,num2):
 		return num1/num2
 	except ZeroDivisionError:
 		print("Error divicion por 0")
+		return "Operacion erronea"
 	
 
 op1=(int(input("Introduce el primer número: ")))
