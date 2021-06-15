@@ -1,3 +1,5 @@
+import sys
+
 def suma(num1, num2):
 	return num1+num2
 
@@ -13,6 +15,7 @@ def divide(num1,num2):
 	except ZeroDivisionError:
 		print("Error divicion por 0")
 		return "Operacion erronea"
+intentos = 0
 while True:		
 	try:
 
@@ -21,6 +24,9 @@ while True:
 		break	
 	except ValueError:
 		print("ERROR VALOR INCORRECTO")
+		intentos += 1
+		if (intentos == 3):
+			sys.exit()
 
 operacion=input("Introduce la operación a realizar (suma,resta,multiplica,divide): ")
 
