@@ -17,5 +17,7 @@ def numeros_pares2(limite):
 		num = num + 1
 		
 numeros = numeros_pares2(6)
-for i in numeros:
-	print(i)
+
+print(next(numeros))
+print(next(numeros))	
+print(next(numeros))
