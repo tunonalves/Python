@@ -1,10 +1,16 @@
 import math
 
 def calculo_raiz_cuadrada(numero):
-	return math.sqrt(numero)
+	if numero < 0:
+		raise ValueError ("Error numero negativo") #Lanza forzozamente una exception
+	else:
+		return math.sqrt(numero)
 
 numeroUsuario = (int(input("Numero: ")))
 
-print(calculo_raiz_cuadrada(numeroUsuario))
+try:
+	print(calculo_raiz_cuadrada(numeroUsuario))
+except ValueError:
+	print("ERROR")
 
 print("FIN PROGRAMA")
