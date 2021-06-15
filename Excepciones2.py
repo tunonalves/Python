@@ -16,6 +16,8 @@ def divide():
 		except:
 			print("ERROR")
 			intentos += 1
+		finally:
+			print("FINALLY")
 		if (intentos == 3):
 			sys.exit()
 		
