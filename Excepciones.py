@@ -8,7 +8,10 @@ def multiplica(num1, num2):
 	return num1*num2
 
 def divide(num1,num2):		
-	return num1/num2
+	try:
+		return num1/num2
+	except ZeroDivisionError:
+		print("Error divicion por 0")
 	
 
 op1=(int(input("Introduce el primer número: ")))
