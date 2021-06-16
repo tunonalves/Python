@@ -2,12 +2,15 @@ class Coche():
 	ruedas = 4
 	largoChasis = 260
 	anchoChasis = 130
+	arrancado = False
 
 	def arrancar(self):
-		pass
+		self.arrancado = True
 	def parar(self):
-		pass
+		self.arrancado = False
 
 miCoche = Coche()
 
 print(miCoche.ruedas)
+miCoche.arrancar()
+print(miCoche.arrancado)
