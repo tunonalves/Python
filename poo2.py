@@ -21,3 +21,5 @@ class Persona():
 mipersona = Persona("Juan","Perez",34,"Varon")
 
 print(mipersona.getdatos())
+
+
