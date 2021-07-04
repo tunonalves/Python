@@ -22,4 +22,7 @@ mipersona = Persona("Juan","Perez",34,"Varon")
 
 print(mipersona.getdatos())
 
+mipersona = Persona("Federico","Tuñon ALves",33,"Varon")
+
+print(mipersona.getdatos())
 
