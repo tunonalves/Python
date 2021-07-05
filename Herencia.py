@@ -23,7 +23,7 @@ class Persona():
 class Estudiante(Persona):
 	
 	def __init__(self, nombre, apellido, edad, escuela):
-	    super().__init__(nombre, apellido, edad)
+	    Persona.__init__(self,nombre, apellido, edad)
 	    self.escuela=escuela
 
 	def Estudia(self):
@@ -33,12 +33,49 @@ class Estudiante(Persona):
 	    return super().getDatosPersonales() + " Escuela: "+self.escuela
 
 
+class Trabajador(Persona):
+	
+	def __init__(self, nombre, apellido, edad, Empresa):
+	    Persona.__init__(self,nombre, apellido, edad)
+	    self.empresa=Empresa
+	
+	def Trabaja(self):
+		return "Estoy Trabajando"
+
+	def getDatosPersonales(self):
+	    return super().getDatosPersonales() + " Empresa: "+self.empresa
+	    
+
+
+class Director(Trabajador,Estudiante): #Herencia Multiple
+
+	def __init__(self, nombre, apellido, edad, Empresa, Escuela,bonus):
+	    Trabajador.__init__(self,nombre, apellido, edad, Empresa)
+	    Estudiante.__init__(self,nombre, apellido, edad, Escuela)
+	    self.bonus=bonus
+
+	def getDatosPersonales(self):
+	    return super().getDatosPersonales() + " Bonus: " + str(self.bonus)
+
+	def Dirige(self):
+		return "Estoy Dirigiendo"
+
+
+
+
+
 
 
 
 Persona1 = Persona("Federico","Tuñon Alves",35)
 Estudiante1 = Estudiante("Pedro","Lopez",40,"San Javier")
 
-
 print(Persona1.getDatosPersonales())
 print(Estudiante1.getDatosPersonales())
+print("---------------------------------------")
+
+Trabajador1 = Trabajador("Juan","Lopez",90,"McDonals")
+Director1 = Director("Facundo","Tuñon",29,"Claro","San Patricio",40.5)
+
+print(Trabajador1.getDatosPersonales())
+print(Director1.getDatosPersonales())
