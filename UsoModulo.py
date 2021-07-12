@@ -1,3 +1,3 @@
-import FuncionesMatematicas
+from ModuloMatematico.FuncionesMatematicas import *
 
-FuncionesMatematicas.sumar(3,5)
+sumar(3,5)
