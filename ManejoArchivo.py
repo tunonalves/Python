@@ -16,3 +16,19 @@ texto = arch_text2.read()
 print(texto)
 
 arch_text2.close()
+
+
+arch_text3 = open("archivo.txt","r")
+
+lineas_text = arch_text3.readlines() #guarda en formato lista 
+
+arch_text3.close()
+
+print(lineas_text[0])
+
+
+arch_text4 = open("archivo.txt","a")
+
+arch_text4.write("\nHola Mundo")
+
+arch_text4.close()
