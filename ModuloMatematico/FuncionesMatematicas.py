@@ -7,3 +7,8 @@ def restar(num1,num2):
 def multiplicar(num1,num2):
 	print("Resultado: ",num1*num2)
 
+def potencia(base,exponente):
+	print("Resultado: ",base**exponente)
+
+def redondear(numero):
+	print("Resultado: ",round(numero))
