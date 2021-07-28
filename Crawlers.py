@@ -7,4 +7,4 @@ docFinal = BeautifulSoup(midoc.text, "html.parser")
 
 iconos = docFinal.select(".emoji")
 
-print(iconos[0])
+print(iconos[0].text)
