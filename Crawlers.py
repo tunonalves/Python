@@ -5,6 +5,6 @@ midoc = requests.get("http://python.beispiel.programmierenlernen.io/index.php")
 
 docFinal = BeautifulSoup(midoc.text, "html.parser")
 
-iconos = docFinal.select(".emoji")
-
-print(iconos[0].text)
+for cuerpoText in docFinal.select(".card-text"):
+	print(cuerpoText.text)
+	print("")
