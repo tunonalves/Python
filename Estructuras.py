@@ -6,3 +6,4 @@ for planet in sistema_solar.split(" "):
 	planetas.add(planet)
 
 print(planetas)
+print(len(planetas))
