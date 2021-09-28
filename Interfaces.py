@@ -14,8 +14,5 @@ miframe.config(bg="gray")
 miframe.config(width="500",height="300")
 miframe.pack(side="top",anchor="n",fill="x")
 
-
-
-
 raiz.mainloop()
 
