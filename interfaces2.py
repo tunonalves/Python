@@ -1,29 +1,12 @@
-import tkinter as tk
+from tkinter import *
 
-class App(tk.Frame):
-    def __init__(self, master):
-        super().__init__(master)
-        self.pack()
+root = Tk()
+miframe = Frame(root,width=500,height=450)
+miframe.pack()
 
-        self.entrythingy = tk.Entry()
-        self.entrythingy.pack()
+milable = Label(miframe,text="Bienvenidos")
+milable.place(x=120,y=120)
 
-        # Create the application variable.
-        self.contents = tk.StringVar()
-        # Set it to some value.
-        self.contents.set("this is a variable")
-        # Tell the entry widget to watch this variable.
-        self.entrythingy["textvariable"] = self.contents
+Label(miframe, text="HOLA MUNDO").place(x=200,y=200)
 
-        # Define a callback for when the user hits return.
-        # It prints the current value of the variable.
-        self.entrythingy.bind('<Key-Return>',
-                             self.print_contents)
-
-    def print_contents(self, event):
-        print("Hi. The current entry content is:",
-              self.contents.get())
-
-root = tk.Tk()
-myapp = App(root)
-myapp.mainloop()
+root.mainloop()
