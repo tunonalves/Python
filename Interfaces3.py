@@ -3,10 +3,10 @@ from tkinter import *
 raiz = Tk()
 raiz.title("INDEX")
 raiz.resizable(0,0)
-raiz.geometry("500x500")
-raiz.config(bg="darkgrey")
+raiz.geometry("800x600")
+raiz.config(bg="gray")
 
-miframe=Frame(raiz)
+miframe=Frame(raiz, bg="darkgrey")
 miframe.pack()
 
 milable1=Label(miframe,text="Nombre: ")
@@ -34,5 +34,13 @@ milable5.grid(row=5,column=0,sticky="w",padx=10,pady=10)
 pass_text=Entry(miframe)
 pass_text.config(show="*")
 pass_text.grid(row=5,column=1)
+
+milable6=Label(miframe,text="Texto: ")
+milable6.grid(row=6,column=0,sticky="w",padx=10,pady=10)
+text_text=Text(miframe,width="25",height="15")
+text_text.grid(row=6,column=1)
+
+text_text=Button(raiz,text="Submit")
+text_text.pack()
 
 raiz.mainloop()
