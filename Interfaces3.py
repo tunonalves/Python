@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import messagebox as MessageBox
 
 raiz = Tk()
 raiz.title("INDEX")
@@ -9,9 +10,11 @@ raiz.config(bg="gray")
 miframe=Frame(raiz, bg="darkgrey")
 miframe.pack()
 
+minombre=StringVar()
+
 milable1=Label(miframe,text="Nombre: ")
 milable1.grid(row=1,column=0,sticky="w",padx=10,pady=10)
-nombre_text=Entry(miframe)
+nombre_text=Entry(miframe,textvariable=minombre)
 nombre_text.grid(row=1,column=1)
 
 milable2=Label(miframe,text="Apellido: ")
@@ -40,7 +43,15 @@ milable6.grid(row=6,column=0,sticky="w",padx=10,pady=10)
 text_text=Text(miframe,width="25",height="15")
 text_text.grid(row=6,column=1)
 
-text_text=Button(raiz,text="Submit")
-text_text.pack()
+miscrollvertical=Scrollbar(miframe,command=text_text.yview)
+miscrollvertical.grid(row="6",column="2",sticky="nsew")
+text_text.config(yscrollcommand=miscrollvertical.set)
+
+def funcionboton():
+	
+	MessageBox.showinfo("Informacion",nombre_text.get()+" "+apellido_text.get())
+
+boton_enviar=Button(raiz,text="Submit",command=funcionboton)
+boton_enviar.pack()
 
 raiz.mainloop()
